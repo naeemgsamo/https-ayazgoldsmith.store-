@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Smart Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"><div class="floating-bg" id="floatingBg"></div><div class="mascot" id="mascot">🐯</div>
+  <div id="loading" class="screen active"><div class="loader-wrap"><div class="loader"></div><div class="loader-dots"><span></span><span></span><span></span></div></div><p style="font-weight:700;font-size:1.2rem">Loading...</p></div>
+
+  <div id="auth" class="screen">
+    <div class="card auth-card">
+      <div class="logo-wrap">
+        <div class="logo-ring"></div>
+        <div class="logo-emoji">🎯</div>
+      </div>
+      <h1>Kids Smart Quiz</h1>
+      <p class="tagline">Learn, Play & Win!</p>
+      <div id="loginForm">
+        <input id="authName" placeholder="Your Name" maxlength="20" autocomplete="off">
+        <select id="authClass"><option value="">Select Class</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>
+        <button id="btnLogin" class="btn-primary">Start Playing</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="home" class="screen">
+    <header>
+      <div class="brand">
+        <span class="brand-emoji">🎯</span>
+        <h1>Kids Smart Quiz</h1>
+      </div>
+      <div class="top-bar">
+        <span id="userInfo"></span>
+        <button id="btnSound" class="icon-btn">🔊</button>
+        <button id="btnTheme" class="icon-btn">🌙</button>
+      </div>
+    </header>
+    <p class="section-title">Pick a Subject</p>
+    <div class="subjects" id="subjects"></div>
+    <div class="home-actions">
+      <button id="btnLeaderboard">🏆 Leaderboard</button>
+      <button id="btnHistory">📜 History</button>
+      <button id="btnLogout">🚪 Logout</button>
+    </div>
+  </div>
+
+  <div id="quiz" class="screen">
+    <div class="quiz-header">
+      <span id="qCounter">1/20</span>
+      <span id="qTimer">20s</span>
+      <span id="qScore">Score: 0</span>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="question-box">
+      <h2 id="qText">Question</h2>
+      <div class="options" id="options"></div>
+    </div>
+    <div class="quiz-footer">
+      <button id="btnQuizBack" class="btn-back">← Back</button>
+      <span id="streak">🔥 0</span>
+      <button id="btnNext" disabled>Next</button>
+    </div>
+  </div>
+
+  <div id="result" class="screen">
+    <div class="card result-card">
+      <div id="confetti"></div>
+      <h2>Quiz Complete!</h2>
+      <div id="badge"></div><div id="badge-text"></div>
+      <p id="rScore"></p>
+      <p id="rPercent"></p>
+      <p id="rEmoji"></p>
+      <div class="result-actions">
+        <button id="btnReplay">Play Again</button>
+        <button id="btnHome2">Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="leaderboard" class="screen">
+    <div class="card">
+      <h2>Leaderboard</h2>
+      <div id="lbList"></div>
+      <button id="btnHome3">Back</button>
+    </div>
+  </div>
+
+  <div id="history" class="screen">
+    <div class="card">
+      <h2>History</h2>
+      <div id="histList"></div>
+      <button id="btnHome4">Back</button>
+    </div>
+  </div>
+</div>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
